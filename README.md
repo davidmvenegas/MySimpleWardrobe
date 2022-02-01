@@ -1,3 +1,3 @@
 # My Simple Wardrobe 
 
-a fully functional eCommerce store with Admin panel
+A fully functional eCommerce store with Admin panel.
