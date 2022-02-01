@@ -1,0 +1,113 @@
+.profileContainer {
+    height: 40rem;
+}
+.profileHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 1.5rem;
+}
+.profileHeaderLinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+.profileHeaderLinks p {
+    margin: 0 2rem;
+    font-size: 1.175rem;
+    cursor: pointer;
+}
+#sec {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 4px;
+}
+#sec:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+#sec.secActive:after {
+    width: 100%;
+    background: teal;
+}
+#sec:hover:after {
+    width: 100%;
+    background: teal;
+}
+#favoriteProductButtonOutline {
+    display: inline-block;
+    font-size: 2rem;
+    margin-right: .75rem;
+    color: black;
+    cursor: pointer;
+}
+#favoriteProductButtonSolid {
+    display: inline-block;
+    font-size: 2rem;
+    margin-right: .75rem;
+    color: crimson;
+    cursor: pointer;
+}
+#favoriteShoppingButtonOutline {
+    cursor: pointer;
+}
+#favoriteShoppingButtonSolid {
+    cursor: pointer;
+    color: crimson;
+}
+#shoppingIconAdded {
+    transition: all .2s ease-in-out;
+}
+#shoppingIconAdded:active {
+    transform: scale(.875);
+}
+#LOADINGcart {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.25rem;
+    color: #444;
+}
+#arrowBackProfile {
+    position: absolute;
+    top: 6.5rem;
+    left: 2.5rem;
+    font-size: 2.35rem;
+    cursor: pointer;
+    color: black;
+}
+
+@media (max-width: 850px) {
+    #arrowBackProfile {
+        top: 6.5rem;
+        left: 1.5rem;
+    }
+}
+@media (max-width: 625px) {
+    .profileHeaderLinks p {
+        margin: 0 1.25rem;
+    }
+    #sec:after {
+        height: 2px;
+    }
+}
+@media (max-width: 480px) {
+    #arrowBackProfile {
+        top: 9.75rem;
+        left: 1.75rem;
+        font-size: 2rem;
+    }
+}
+@media (max-width: 400px) {
+    .profileHeaderLinks p {
+        margin: 0 1rem;
+    }
+}

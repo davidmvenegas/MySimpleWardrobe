@@ -1,0 +1,43 @@
+.productList {
+    margin-top: 25px;
+    width: 80vw;
+}
+.productListItem {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.productListImg  {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+.productListEdit {
+    border: none;
+    border-radius: 5px;
+    padding: 7px 12.5px;
+    background-color: teal;
+    color: white;
+    cursor: pointer;
+    width: 4.5rem;
+    margin-left: 10px;
+    margin-right: 50px;
+}
+.productListDelete {
+    color: red;
+    cursor: pointer;
+    font-size: 32.5px !important;
+}
+.product-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem 2rem;
+}
+#productHeaderTitle {
+    font-size: 2.5rem;
+    font-weight: 900;
+}

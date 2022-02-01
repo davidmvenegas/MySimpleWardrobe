@@ -1,0 +1,390 @@
+/* REVIEW HEADER */
+.reviewsContainer {
+    background-color: rgba(0,0,0,.085);
+    padding: 2rem 5rem;
+}
+.reviewTopTitle {
+    font-size: 3rem;
+    font-weight: 300;
+    text-align: center;
+}
+.reviewsHeader {
+    margin: .6rem 0 1.85rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.reviewsHeader p {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    font-weight: 300;
+}
+
+/* REVIEW FORM */
+.reviewsForm {
+    height: auto;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.reviewsFormOpenButton {
+    width: fit-content;
+    height: fit-content;
+    padding: .65rem .85rem;
+    border: none;
+    background-color: teal;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.reviewsFormOpenButton:hover {
+    background-color: rgb(0, 140, 140);
+}
+.reviewsFormOpenButton:disabled {
+    background-color: lightslategrey;
+    cursor: not-allowed;
+}
+.reviewModalContainer {
+    position: relative;
+    width: 100%;
+    height: 17.5rem;
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px, rgba(0, 0, 0, 0.2) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    margin: 5px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px;
+}
+.reviewModalContainer .title {
+    display: inline-block;
+    margin-bottom: 25px;
+    margin-top: -5px;
+}
+.reviewModalContainer .title.lighterR {
+    opacity: .25;
+    pointer-events: none;
+}
+.reviewModalContainer .title h1 {
+    font-weight: 500;
+    font-size: 2rem;
+    padding-bottom: .2rem;
+}
+.reviewModalContainer .title h1 span {
+    font-size: 2.4rem;
+    display: inline-block;
+    font-weight: 700;
+    padding-left: .25rem;
+    line-height: .9;
+}
+.reviewModalContainer .body {
+    flex: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 1.7rem;
+    text-align: center;
+}
+.reviewModalContainer .body.lighterR {
+    opacity: .25;
+    pointer-events: none;
+}
+.reviewHeadlineItem {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+#RHI1 {
+    flex: .8;
+    padding-right: 1.75rem;
+}
+#RHI2 {
+    flex: 1.2;
+}
+#RHI3 {
+    flex: 1.8;
+}
+.reviewHeadlineItem label {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: teal;
+    margin-bottom: .5rem;
+}
+#reviewHeadline {
+    font-family: 'Urbanist', sans-serif;
+    width: 85%;
+    height: 2.75rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding: .5rem;
+    border-radius: .25rem;
+    border: 1px solid #333;
+}
+#reviewDesc {
+    position: absolute;
+    top: 2.25rem;
+    left: 0;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.125rem;
+    resize: both;
+    height: 7.25rem;
+    width: 97.5%;
+    min-width: 18.5rem;
+    max-width: 97.5%;
+    min-height: 5rem;
+    max-height: 7.25rem;
+    border-radius: .25rem;
+    padding: .35rem .5rem;
+}
+.reviewModalContainer .footer {
+    flex: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.reviewModalContainer .footer.lighterR {
+    opacity: .25;
+    pointer-events: none;
+}
+.reviewModalContainer .footer button {
+    width: 125px;
+    height: 42.5px;
+    margin: 10px 0;
+    margin-right: 25px;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#reviewCancelBtn {
+    background-color: crimson;
+}
+.reviewModalContainer .footer.lighterR button {
+    background-color: gray;
+}
+#loadingUpdateReview {
+    position: absolute;
+    align-self: center;
+    display: inline-block;
+    top: 50%;
+    width: 65px;
+    height: 65px;
+    border: 10.5px solid #aaa;
+    border-radius: 50%;
+    border-top-color: teal;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: reviewSpin 1s ease-in-out infinite;
+    margin-top: -2rem;
+    margin-bottom: -2rem;
+    z-index: 10000;
+}
+@keyframes reviewSpin {
+    to { -webkit-transform: rotate(360deg); }
+}
+
+/* PAST REVIEWS */
+.pastReviewsContainer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 2.5rem auto 1rem;
+}
+.pastReview {
+    position: relative;
+    width: 100%;
+    background-color: white;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+    border-radius: .25rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+.pastReviewHeader {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.pastReviewHeader p span {
+    display: inline-block;
+}
+.pastReviewHeader p {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-left: 1rem;
+}
+.pastReviewBody {
+    margin-top: .5rem;
+}
+.pastReviewBox {
+    margin-bottom: .65rem;
+}
+.pastReviewTitle {
+    font-size: 1.8rem;
+    text-transform: capitalize;
+}
+.pastReviewDate {
+    font-size: 1rem;
+}
+.pastReviewDesc {
+    font-size: 1.2rem;
+    width: 95%;
+}
+#deleteAReview {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: .9rem;
+    text-decoration: underline;
+}
+#deleteAReview:hover {
+    color: red;
+    cursor: pointer;
+}
+#authorIndicator {
+    color: teal;
+}
+#verifiedWrap {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#verifiedWrap p {
+    font-size: .95rem;
+    font-weight: 600;
+}
+#reviewVer {
+    font-size: 1.25rem;
+    margin-left: .25rem;
+    color: green;
+}
+#arrowBackCart {
+    display: none;
+    position: absolute;
+    top: 7.5rem;
+    left: 2.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: black;
+}
+
+@media (max-width: 850px) {
+    .reviewsContainer {
+        padding: 2rem 2.5rem;
+    }
+    .reviewTopTitle {
+        font-size: 2.5rem;
+        font-weight: 400;
+    }
+    .reviewModalContainer {
+        height: 33.5rem;
+        align-items: center;
+    }
+    .reviewModalContainer .title h1 {
+        font-size: 1.85rem;
+    }
+    .reviewModalContainer .title h1 span {
+        font-size: 2rem;
+    }
+    .reviewModalContainer .body {
+        align-items: center;
+        flex-direction: column;
+        margin-top: -1rem;
+    }
+    .reviewHeadlineItem {
+        align-items: center;
+        margin-bottom: .5rem;
+    }
+    #RHI1 {
+        padding-right: 0rem;
+    }
+    #reviewDesc {
+        top: 2.5rem;
+        left: 2.5rem;
+        transform: translateX(-50%);
+        resize: none;
+        width: 100%;
+    }
+    #reviewTextAriaThing {
+        margin-bottom: 5rem;
+        margin-top: .25rem;
+    }
+    .reviewModalContainer .footer button {
+        width: 90px;
+        height: 35px;
+        margin-right: 0px;
+        margin: 0 .75rem;
+        font-size: 17.5px;
+        border-radius: 5px;
+    }
+    .reviewModalContainer .footer {
+        margin-top: 3.5rem;
+    }
+    .pastReviewDesc {
+        width: 92.5%;
+    }
+    #arrowBackCart {
+        display: block;
+    }
+    #arrowBackProductActual {
+        font-size: 2rem !important;
+    }
+}
+@media (max-width: 480px) {
+    .reviewsContainer {
+        padding: 2rem 1.5rem;
+    }
+    .reviewsHeader {
+        margin: .25rem 0 .75rem;
+        flex-direction: column;
+    }
+    .reviewTopTitle {
+        font-size: 2rem;
+        font-weight: 500;
+        width: 90%;
+        margin-left: 5%;
+    }
+    .reviewModalContainer .title h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .reviewModalContainer .title h1 span {
+        font-size: 1.75rem;
+    }
+    .pastReviewDesc {
+        width: 85%;
+    }
+    .pastReviewHeader {
+        margin-top: .5rem;
+    }
+    #verifiedWrap {
+        top: .65rem;
+        right: .65rem;
+    }
+    #favoriteProductButtonOutline {
+        position: absolute;
+        top: 10.9rem;
+        right: 3rem;
+    }
+    #favoriteProductButtonSolid {
+        position: absolute;
+        top: 10.9rem;
+        right: 3rem;
+    }
+    #arrowBackCart {
+        display: block;
+        top: 9rem;
+        left: 1.5rem;
+    }
+}

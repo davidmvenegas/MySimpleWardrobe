@@ -1,0 +1,40 @@
+.userList {
+  margin-top: 25px;
+  width: 80vw;
+}
+.userListUser {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.userListUser > p {
+  margin-left: .25rem;
+}
+#userStar {
+  color: black;
+}
+.userListImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.userListEdit {
+  border: none;
+  font-size: .9rem;
+  border-radius: 5px;
+  padding: 7px 12.5px;
+  background-color: teal;
+  color: white;
+  cursor: pointer;
+  width: 4.5rem;
+  margin-left: 10px;
+  margin-right: 80px;
+}
+.userListDelete {
+  color: red;
+  cursor: pointer;
+  font-size: 30px !important;
+}

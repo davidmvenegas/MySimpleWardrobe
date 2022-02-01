@@ -1,0 +1,80 @@
+.newProduct {
+  margin-top: -50px;
+  width: 80vw;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.addProductForm {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.addProductItem {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+.addProductItem > label {
+  align-self: flex-start;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(86, 86, 86);
+}
+.addProductItem > input {
+  height: 42.5px;
+  padding: 10px;
+  margin-bottom: 6.5px;
+  font-size: .85rem;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.addProductItem > select {
+  height: 50px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.addProductButton {
+  position: absolute;
+  bottom: -4rem;
+  width: 115px;
+  border: none;
+  background-color: teal;
+  color: white;
+  padding: 10px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 7.5px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+#loadingNewProduct {
+  position: absolute;
+  align-self: center;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 6px solid rgba(0,0,0,.3);
+  border-radius: 50%;
+  border-top-color: teal;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+  margin-top: -2.5rem;
+  margin-bottom: -2.5rem;
+}
+.addProductButton.lighter {
+  background-color: gray;
+  cursor: not-allowed;
+}
+.addProductTitle {
+  font-size: 2.75rem;
+}

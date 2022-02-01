@@ -1,0 +1,122 @@
+.categoriesContainer {
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.featuredProductsTitle {
+    font-size: 3rem;
+    margin: 1rem 0 2.25rem;
+}
+.categoriesWrapper {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 1rem;
+}
+.aCategory {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 25rem;
+    margin: .5rem;
+}
+.aCategory img {
+    height: 100%;
+    width: 25rem;
+    background-color: #d1f2f9;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.aCategory:hover .aCategoryText {
+    animation: comeUpBoi .25s forwards;
+}
+.aCategory:hover .aCategoryText h1 {
+    animation: bop1 .25s forwards;
+}
+.aCategory:hover .buttonWrapperCat {
+    animation: bop1 .25s forwards;
+}
+.aCategoryText {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, .4);
+    opacity: 0;
+    cursor: pointer;
+}
+@keyframes comeUpBoi {
+    100% { opacity: 1; }
+}
+@keyframes bop1 {
+    100% { margin-top: 0; }
+}
+.aCategoryText h1 {
+    margin-top: 2.5rem;
+    margin-bottom: 1.25rem;
+    font-size: 2rem;
+    font-weight: 800;
+}
+.buttonWrapperCat {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.aCategoryText button {
+    color: white;
+    font-size: 1.25rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.aCategoryText button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+#catRight {
+    margin-top: .145rem;
+}
+
+@media (max-width: 1280px) {
+    .categoriesWrapper {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        gap: 1rem;
+    }
+}
+@media (max-width: 850px) {
+    .categoriesWrapper {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        gap: 1rem;
+    }
+}
+@media (max-width: 480px) {
+    .categoriesContainer {
+        margin: 4.5rem 0 3.5rem;
+    }
+    .aCategory {
+        height: 18rem;
+    }
+    .aCategory img {
+        width: 18rem;
+    }
+    .featuredProductsTitle {
+        font-size: 2.5rem;
+    }
+    .aCategoryText h1 {
+        font-size: 1.65rem;
+    }
+}

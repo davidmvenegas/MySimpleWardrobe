@@ -1,0 +1,85 @@
+.newUser {
+  margin-top: -100px;
+  width: 80vw;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.newUserTitle {
+  font-size: 2.75rem;
+}
+.newUserForm {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.newUserItem {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+.newUserItem > label {
+  align-self: flex-start;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(86, 86, 86);
+}
+.newUserItem > input {
+  height: 50px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.newUserGender > label {
+  margin: 0 10px;
+  font-size: 18px;
+  color: #555;
+  margin-right: 50px;
+}
+.newUserButton {
+  position: absolute;
+  bottom: -4rem;
+  width: 115px;
+  border: none;
+  background-color: teal;
+  color: white;
+  padding: 10px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 7.5px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+#loadingNewUser {
+  position: absolute;
+  align-self: center;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 6px solid rgba(0,0,0,.3);
+  border-radius: 50%;
+  border-top-color: teal;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+  margin-top: -2.5rem;
+  margin-bottom: -2.5rem;
+}
+.newUserItem.lighter {
+  opacity: .5;
+}
+.addProductItem.lighter {
+  opacity: .5;
+}
+.newUserButton.lighter {
+  background-color: gray;
+  cursor: not-allowed;
+}

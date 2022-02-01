@@ -1,0 +1,72 @@
+.userEntireContainer {
+  width: 50%;
+  padding: 40px 20px;
+  margin: 20px;
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  position: relative;
+}
+.userForm {
+  display: flex;
+  justify-content: center;
+}
+.userFormLeft {
+  display: flex;
+  flex-direction: column;
+}
+.userFormLeft > label {
+  margin-bottom: 5px;
+  color: black;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+.userFormLeft > input {
+  margin-bottom: 22.5px;
+  border: none;
+  padding: 5px;
+  font-size: 1rem;
+  width: 25rem;
+  border-bottom: 1px solid black;
+}
+.userFormLeft > select {
+  margin-bottom: 5px;
+  padding: 5px;
+  height: 35px;
+}
+.userActualButton {
+  border: none;
+  padding: 11.5px;
+  border-radius: 5px;
+  background-color: teal;
+  align-self: center;
+  width: 12rem;
+  color:white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 30px;
+}
+#loadingUpdateUser {
+  position: absolute;
+  align-self: center;
+  display: inline-block;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  border: 6px solid rgba(0,0,0,.3);
+  border-radius: 50%;
+  border-top-color: teal;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+  margin-top: -2.5rem;
+  margin-bottom: -2.5rem;
+}
+.userFormLeft.lighter > label,
+.userFormLeft.lighter > input,
+.userFormLeft.lighter > select {
+  opacity: .4;
+}
+.userActualButton.lighter {
+  background-color: gray;
+  cursor: not-allowed;
+}

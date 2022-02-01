@@ -1,0 +1,139 @@
+.historyContainer {
+    height: 100%;
+    width: 60%;
+    margin: 2.5rem auto 0;
+}
+.historyWrapper {
+    height: 100%;
+    width: 100%;
+}
+.historyHeading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+.historyHeadingTop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.historyHeadingTop h1 {
+    font-size: 1.85rem;
+    font-weight: 700;
+    letter-spacing: .025rem;
+}
+.historyHeading p {
+    margin: .4rem 0 .5rem;
+    font-size: .9rem;
+    padding-left: .125rem;
+}
+.historyBody {
+    height: 18rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    margin-top: .65rem;
+    padding-left: .25rem;
+    border-radius: .25rem;
+    margin-right: .25rem !important;
+}
+#historyIsEmpty {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -55%);
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: #444;
+}
+.historyBody::-webkit-scrollbar {
+    width: calc(20px / 2);
+}
+.historyBody::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.2); 
+    border-radius: 10px;
+}
+.historyBody::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(136, 136, 136, 0.85);
+}
+.historyTable {
+    width: 100%;
+    height: fit-content;
+    display: table;
+    border-collapse: collapse;
+}
+.historyTableHeader {
+    position: sticky;
+    top: 0;
+    background-color: transparent;
+}
+.historyTableHeader::after {
+    content: "@";
+    display: block;
+    line-height: 10px;
+    text-indent: -99999px;
+    background-color: transparent;
+    width: 1vw;
+}
+.historyTableHeader th {
+    position: static;
+    display: table-cell;
+    float: none;
+    width: 20%;
+    padding: .6rem 0;
+    font-size: calc(14rem / 16);
+    font-weight: 500;
+    color: #666;
+    background-color: white;
+}
+.historyItem {
+    box-sizing: border-box;
+    border: 1px solid #bbb;
+    width: 60vw;
+    font-size: calc(15rem / 16);
+    font-weight: 500;
+}
+.historyItem:hover {
+    background-color: rgba(0,0,0,0.05);
+    cursor: pointer;
+}
+.history-order-item {
+    width: 20%;
+    text-align: center;
+    padding: .8rem;
+}
+.history-order-item:first-of-type {
+    font-weight: 600;
+}
+.history-order-item:nth-of-type(2) {
+    color: teal;
+    font-weight: 700;
+}
+.history-order-item:nth-of-type(4) {
+    font-weight: 300;
+}
+.order-arrow-container {
+    width: 20%;
+    text-align: center;
+}
+.trFiller {
+    height: .65rem;
+}
+
+@media (max-width: 1325px) {
+    .historyContainer {
+        width: 70%;
+    }
+}
+@media (max-width: 1050px) {
+    .historyContainer {
+        width: 80%;
+    }
+}
+@media (max-width: 650px) {
+    .historyContainer {
+        width: 90%;
+    }
+}

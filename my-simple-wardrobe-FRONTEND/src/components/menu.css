@@ -1,0 +1,103 @@
+.menu {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: white;
+}
+.menu-navbar-links {
+    height: 100%;
+}
+.menu-navbar-links ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.menu-navbar-links li {
+    list-style: none;
+}
+.menu-link {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1.05rem 2.35rem;
+    font-size: 1.085rem;
+    cursor: pointer;
+}
+.menu-navbar-links li:hover {
+    background-color: #555;
+}
+.menu-toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+.menu-toggle-button .menu-bar {
+    height: 3px;
+    width: 100%;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+@media (max-width: 625px) {
+    .menu-link {
+        padding: 1rem 1.85rem;
+    }
+}
+@media (max-width: 480px) {
+    .menu-navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .menu-toggle-button {
+        display: flex;
+        cursor: pointer;
+        z-index: 1000;
+    }
+    .menu-bar {
+        transition: all .5s ease-in-out;
+    }
+    .menu-bar:nth-child(1).menuActive {
+        transform: translate(0, 9px) rotate(45deg);
+        background-color: white;
+        z-index: 1000;
+    }
+    .menu-bar:nth-child(2).menuActive {
+        opacity: 0;
+    }
+    .menu-bar:nth-child(3).menuActive {
+        transform: translate(0, -8px) rotate(-45deg);
+        background-color: white;
+        z-index: 1000;
+    }
+    .menu-navbar-links {
+        display: none;
+        width: 100%;
+    }
+    .menu-navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+        margin: 1rem 0;
+    }
+    .menu-navbar-links ul li {
+        text-align: center;
+        width: 10rem;
+    }
+    .menu-link {
+        padding: .5rem 1rem;
+    }
+    .menu-navbar-links.menuActive {
+        display: flex;
+    }
+    #badgeCart {
+        margin-left: 2.5rem;
+    }
+}

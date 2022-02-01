@@ -1,0 +1,272 @@
+.piContainer {
+    background-color: whitesmoke;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+.piWrapper {
+    width: 75vw;
+    margin: 0 auto;
+    padding-bottom: 2.5rem;
+}
+.piHeader {
+    padding-top: 5rem;
+}
+.piHeaderTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.piHeaderTop h1 {
+    font-weight: 400;
+    font-size: 2.25rem;
+    text-transform: uppercase;
+}
+.piHeaderTop p {
+    color: #555;
+}
+.piHeaderTop p span {
+    text-decoration: underline;
+}
+.piHeaderBottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2.5rem auto;
+}
+.piHeaderBottom p {
+    font-size: 1rem;
+    line-height: 1.4;
+    font-style: italic;
+}
+.piHeaderBottom p span {
+    line-height: 1.8;
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-style: normal;
+}
+.piHeaderBottom h6 {
+    font-size: 1.65rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.piHeaderBottom h6 span {
+    text-transform: none;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.piBody {
+    height: fit-content;
+    width: 100%;
+}
+.piBody h3 {
+    border-bottom: 3px solid #333;
+    padding-bottom: .15rem;
+    width: 100%;
+}
+.piBodyItems {
+    margin: 1.5rem auto;
+}
+.piBodyItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+.piSlineBR {
+    height: 1px;
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 1rem;
+    margin-bottom: .5rem;
+}
+.piBodyItem img {
+    height: 4rem;
+    width: 4rem;
+}
+.piBodyItem h1 {
+    font-size: 1.65rem;
+    font-weight: 500;
+    width: 35%;
+}
+.piBodyItem h5 {
+    font-size: 1.25rem;
+    width: 7.5%;
+}
+.piBodyItem > span {
+    width: 17.5px;
+    height: 17.5px;
+    border-radius: 50%;
+    background-color: gray;
+    border: 2px solid #444;
+}
+.piBodyItem p {
+    font-size: 1.25rem;
+}
+.piBodyItem p span {
+    font-size: 1rem;
+}
+.piFooter {
+    height: fit-content;
+    width: 100%;
+}
+.piFooter h5 {
+    font-size: 1.2rem;
+    border-bottom: 3px solid #333;
+    padding-bottom: .15rem;
+    width: 100%;
+}
+.piSummary {
+    margin: 1rem auto;
+}
+.piSline1 {
+    height: 3.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.piSline1 p {
+    font-size: 1.05rem;
+}
+.piSline2 {
+    margin-bottom: .5rem;
+    height: 3.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #aaa;
+}
+.piSline2 p {
+    font-size: 1.05rem;
+}
+.piSline3 {
+    margin-bottom: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.piSlide3Box {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+.piSlide3Box h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: .2rem;
+}
+.piSlide3Box p {
+    margin-top: .5rem;
+    font-size: .8rem;
+    font-weight: 400;
+    color: #555;
+}
+.piSline3 > p {
+    align-self: flex-start;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-top: .2rem;
+}
+#arrowBackOrder {
+    position: absolute;
+    top: 2.5rem;
+    left: 2.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: black;
+}
+
+@media (max-width: 1050px) {
+    .piHeaderTop h1 {
+        font-size: 2rem;
+    }
+    .piHeaderBottom h6 {
+        font-size: 1.5rem;
+    }
+    .piHeaderBottom h6 span {
+        font-size: 1.85rem;
+    }
+    .piBodyItem h1 {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 625px) {
+    .piWrapper {
+        width: 87.5vw;
+    }
+    .piBodyItem h1 {
+        font-size: 1.35rem;
+    }
+    .piBodyItem h5 {
+        font-size: 1.125rem;
+    }
+    .piBodyItem > span {
+        width: 15px;
+        height: 15px;
+    }
+    .piBodyItem p {
+        font-size: 1.125rem;
+    }
+    .piHeaderTop h1 {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    .piHeaderBottom h6 {
+        font-size: 1.25rem;
+    }
+    .piHeaderBottom h6 span {
+        font-size: 1.5rem;
+    }
+    #arrowBackOrder {
+        top: 1rem;
+        left: 1rem;
+    }
+    
+}
+@media (max-width: 480px) {
+    .piWrapper {
+        width: 90vw;
+    }
+    .piBodyItem {
+        padding: 0;
+    }
+    .piBodyItem h1 {
+        font-size: 1.25rem;
+    }
+    .piBodyItem h5 {
+        font-size: 1rem;
+    }
+    .piBodyItem img {
+        height: 3.25rem;
+        width: 3.25rem;
+    }
+    .piBodyItem > span {
+        width: 13.5px;
+        height: 13.5px;
+    }
+    .piHeaderTop h1 {
+        font-size: 1.125rem;
+        font-weight: 900;
+    }
+    .piHeaderBottom h6 {
+        font-size: 1rem;
+    }
+    .piHeaderBottom h6 span {
+        font-size: 1.35rem;
+    }
+    .piHeaderTop p {
+        font-size: .8rem;
+    }
+    .piHeaderTop p span {
+        font-weight: 600;
+    }
+    .piHeaderBottom p {
+        font-size: .85rem;
+    }
+    .piHeaderBottom p span {
+        font-size: 1.125rem;
+    }
+}

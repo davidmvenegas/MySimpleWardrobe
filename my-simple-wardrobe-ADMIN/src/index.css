@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.container{
+    display: flex;
+    margin-top: 10px;
+}
+.link{
+    text-decoration: none;
+    color: inherit;
+}
